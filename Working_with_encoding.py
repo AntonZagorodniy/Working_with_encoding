@@ -3,6 +3,7 @@ import chardet
 from collections import Counter
 from pprint import pprint
 
+
 def open_file(name):
     text = {}
     try:
@@ -38,9 +39,10 @@ def parsing_text(open_file):
     d.reverse()
     repeat_words = ""
     for i in range(1, 10):
-        repeat_words = repeat_words +", "+ (d[i][0])
+        repeat_words = repeat_words + ", " + (d[i][0])
     repeat_words = d[0][0] + repeat_words.lstrip()
     return repeat_words
+
 
 def parsing_text_newsfr():
     repeat_words = parsing_text(open_file_newsfr())
@@ -49,7 +51,8 @@ def parsing_text_newsfr():
 
 def parsing_text_newscy():
     repeat_words = parsing_text(open_file_newscy())
-    print("Наиболее употребляемые слова в новостях Кипра из еще одного файла:", repeat_words)
+    print("Наиболее употребляемые слова в новостях Кипра из еще одного файла:",
+          repeat_words)
 
 
 def parsing_text_newsafr():
